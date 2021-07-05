@@ -21,15 +21,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnGotorestponseList(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "GithubViewcontroller") as! GithubViewcontroller
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        self.navigationController!.pushViewController(ViewController(nibName: "GithubViewcontroller", bundle: nil), animated: true)
-//        let githubViewController = GithubViewcontroller(nibName: "GithubViewController", bundle: nil)
-//        let githubViewController = GithubViewcontroller.init(nibName: "GithubViewController", bundle: nil)
-//        self.navigationController?.pushViewController(githubViewController, animated: true)
         let githubViewController = GithubViewcontroller.initFromNib()
-//        self.present(githubViewController, animated: true)
         self.navigationController?.pushViewController(githubViewController, animated: true)
     }
 }

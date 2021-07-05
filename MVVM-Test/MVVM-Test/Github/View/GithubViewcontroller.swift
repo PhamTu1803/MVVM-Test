@@ -8,7 +8,7 @@
 import UIKit
 
 class GithubViewcontroller: UIViewController {
-    private var viewModel: GithubViewModel!
+    private var viewModel = GithubViewModel()
     @IBOutlet weak var searchtext: UITextField!
     @IBOutlet weak var githubTbview: UITableView!
     @IBOutlet weak var topactivities: UIActivityIndicatorView!
@@ -80,6 +80,7 @@ class GithubViewcontroller: UIViewController {
 }
 extension GithubViewcontroller : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return viewModel.numberOfRowsInSection(section: section)
     }
     
